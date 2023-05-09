@@ -698,15 +698,16 @@ measure: VKFE_Q2_2020 {
     sql: ${vkfe_q3_2021_rule3_positive} ;;
     value_format_name: usd_0
   }
-  measure: VKFE_Q3_2021_v1 {
+  measure: VKFE_Lo {
     type: sum
-    sql: ${vkfe_q3_2021_rule3_positive} ;;
+    sql: ${vkfe_2020_total} ;;
     value_format_name: usd_0
   }
-  measure: VKFE_Q3_2021_v2 {
+  measure: VKFE_Hi {
     type: sum
-    sql: ${vkfe_q3_2021_rule3_positive} ;;
+    sql: ${vkfe_q1_2021_positive} + ${vkfe_2020_total} + ${vkfe_q2_2021_grant_correction_rule4} ;;
     value_format_name: usd_0
   }
+
 
 }
