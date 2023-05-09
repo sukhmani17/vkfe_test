@@ -698,9 +698,5 @@ measure: VKFE_Q2_2020 {
     sql: ${vkfe_q3_2021_rule3_positive} ;;
     value_format_name: usd_0
   }
-  measure: Number_of_Employees2 {
-    type: sum
-    sql: ${number_of_employees} ;;
 
-  }
 }
