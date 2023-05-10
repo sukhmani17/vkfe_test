@@ -57,6 +57,12 @@ view: ppp_ppx_pps_final_29_jan2023_v4_url {
     sql: ${TABLE}.BorrowerState ;;
   }
 
+  dimension: borrower_state_map  {
+    type: string
+    map_layer_name: us_states
+    sql: ${TABLE}.BorrowerState ;;
+  }
+
   dimension: borrower_zip {
     type: string
     sql: ${TABLE}.BorrowerZip ;;
@@ -480,5 +486,57 @@ view: ppp_ppx_pps_final_29_jan2023_v4_url {
   measure: count {
     type: count
     drill_fields: [borrower_name, project_county_name, franchise_name, servicing_lender_name]
+  }
+
+  measure: vkfe_total_sum {
+    type:  sum
+    sql: ${vkfe_total} ;;
+    value_format_name: usd_0
+  }
+  measure: VKFE_Q1_2020{
+    type: sum
+    sql: ${vkfe_q1_2020} ;;
+    value_format_name: usd_0
+
+  }
+  measure: VKFE_Q2_2020 {
+    type: sum
+    sql: ${vkfe_q2_2020} ;;
+    value_format_name: usd_0
+  }
+  measure: VKFE_Q3_2020 {
+    type: sum
+    sql: ${vkfe_q3_2020} ;;
+    value_format_name: usd_0
+  }
+  measure: VKFE_Q4_2020 {
+    type: sum
+    sql: ${vkfe_q4_2020} ;;
+    value_format_name: usd_0
+  }
+  measure: VKFE_Q1_2021 {
+    type: sum
+    sql: ${vkfe_q1_2021} ;;
+    value_format_name: usd_0
+  }
+  measure: VKFE_Q2_2021 {
+    type: sum
+    sql: ${vkfe_q2_2021} ;;
+    value_format_name: usd_0
+  }
+  measure: VKFE_Q3_2021 {
+    type: sum
+    sql: ${vkfe_q3_2021} ;;
+    value_format_name: usd_0
+  }
+  measure: VKFE_Lo {
+    type: sum
+    sql: ${vkfe_2020_total} ;;
+    value_format_name: usd_0
+  }
+  measure: VKFE_Hi {
+    type: sum
+    sql: ${vkfe_q1_2021} + ${vkfe_2020_total} + ${vkfe_q2_2021} ;;
+    value_format_name: usd_0
   }
 }
