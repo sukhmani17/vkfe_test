@@ -240,6 +240,11 @@ view: ppp_ppx_pps_final_29_jan2023_v3_url {
     type: number
     sql: ${TABLE}.f1_ ;;
   }
+  dimension:  jobs_reported_PPS {
+    type: number
+    sql: ${TABLE}.f1_ ;;
+  }
+
 
   dimension: forgiveness_amount {
     type: number
@@ -292,6 +297,11 @@ view: ppp_ppx_pps_final_29_jan2023_v3_url {
   }
 
   dimension: jobs_reported {
+    type: number
+    sql: ${TABLE}.JobsReported ;;
+  }
+
+  dimension: jobs_reported_PPP {
     type: number
     sql: ${TABLE}.JobsReported ;;
   }
@@ -357,6 +367,11 @@ view: ppp_ppx_pps_final_29_jan2023_v3_url {
   }
 
   dimension: naics_us_title2017 {
+    type: string
+    sql: ${TABLE}.NAICS_US_Title2017 ;;
+  }
+
+  dimension: naics_Title {
     type: string
     sql: ${TABLE}.NAICS_US_Title2017 ;;
   }
