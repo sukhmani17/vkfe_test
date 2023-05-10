@@ -301,11 +301,6 @@ view: ppp_ppx_pps_final_29_jan2023_v3_url {
     sql: ${TABLE}.JobsReported ;;
   }
 
-  dimension: jobs_reported_PPP {
-    type: number
-    sql: ${TABLE}.JobsReported ;;
-  }
-
   dimension: lmiindicator {
     type: yesno
     sql: ${TABLE}.LMIIndicator ;;
@@ -371,10 +366,6 @@ view: ppp_ppx_pps_final_29_jan2023_v3_url {
     sql: ${TABLE}.NAICS_US_Title2017 ;;
   }
 
-  dimension: naics_Title {
-    type: string
-    sql: ${TABLE}.NAICS_US_Title2017 ;;
-  }
 
   dimension: naicscode {
     type: number
