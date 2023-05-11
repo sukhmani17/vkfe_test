@@ -478,6 +478,10 @@ view: ppp_ppx_pps_final_29_jan2023_v4_url {
     sql: ${TABLE}.zip_5 ;;
   }
 
+  dimension: zip_5_location {
+    type: zipcode
+    sql: ${TABLE}.zip_5 ;;
+  }
   dimension: zip_5_1 {
     type: string
     sql: ${TABLE}.zip_5_1 ;;
