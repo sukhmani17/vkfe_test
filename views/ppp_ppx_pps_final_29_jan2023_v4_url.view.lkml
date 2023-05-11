@@ -467,7 +467,12 @@ view: ppp_ppx_pps_final_29_jan2023_v4_url {
     type: number
     sql: ${TABLE}.VKFE_total ;;
   }
-
+ dimension: vkfe_total_amount_bucket {
+   type: tier
+   sql: ${vkfe_total} ;;
+   tiers: [0 , 50000 ,  100000 , 200000,  500000, 800000 , 1000000]
+   style: integer
+ }
   dimension: wq {
     type: number
     sql: ${TABLE}.WQ ;;
