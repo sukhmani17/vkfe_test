@@ -1,8 +1,10 @@
 view: ppp_ppx_pps_final_29_jan2023_v4_url {
   sql_table_name: `VKFE_28Jan2023.PPP_PPX_PPS_final_29Jan2023_v4_URL`
     ;;
+    label: "VKFE"
 
   dimension_group: begining {
+    label: "VKFE_test"
     type: time
     timeframes: [
       raw,
